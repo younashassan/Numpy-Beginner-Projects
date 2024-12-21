@@ -1,0 +1,15 @@
+import numpy as np
+
+# Sample 5x5 grayscale image represented as a 2D NumPy array
+grayscale_image = np.array([
+    [100, 150, 200, 250, 120],
+    [50, 80, 90, 110, 60],
+    [200, 180, 160, 140, 220],
+    [30, 45, 55, 65, 75],
+    [255, 240, 230, 220, 210]
+])
+
+threshold = 128
+
+binary_image = (grayscale_image > threshold).astype(int)
+print("Binary Image:\n", binary_image)
