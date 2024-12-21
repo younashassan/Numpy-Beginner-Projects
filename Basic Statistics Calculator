@@ -1,0 +1,24 @@
+import numpy as np
+from scipy.stats import mode
+
+def basic_statistics_calculator(data):
+    # Calculate mean
+    mean_value = np.mean(data)
+    
+    # Calculate median
+    median_value = np.median(data)
+    
+    # Calculate mode
+    mode_value, mode_count = mode(data)
+    
+    # Calculate standard deviation
+    std_deviation = np.std(data)
+    
+    print("Mean:", mean_value)
+    print("Median:", median_value)
+    print("Mode:", mode_value[0], " (Count:", mode_count[0], ")")
+    print("Standard Deviation:", std_deviation)
+
+data = np.array([12, 15, 13, 12, 18, 19, 17, 14, 13, 16, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23])
+
+basic_statistics_calculator(data)
