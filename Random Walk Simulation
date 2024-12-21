@@ -1,0 +1,17 @@
+import numpy as np
+
+# Define the number of steps
+num_steps = 1000
+
+# Initialize the starting point (0, 0)
+positions = np.zeros((num_steps, 2), dtype=int)
+
+# Define possible steps: right [1, 0], left [-1, 0], up [0, 1], down [0, -1]
+steps = np.array([[1, 0], [-1, 0], [0, 1], [0, -1]])
+
+# Generate random walk
+for i in range(1, num_steps):
+    step = steps[np.random.randint(0, 4)]
+    positions[i] = positions[i-1] + step
+
+print("Final positions:\n", positions)
