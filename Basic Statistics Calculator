@@ -1,7 +1,28 @@
-echo "# Numpy-Beginner-Projects" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin git@github.com:younashassan/Numpy-Beginner-Projects.git
-git push -u origin main
+import numpy as np
+
+# Define matrices
+matrix_a = np.array([[1, 2],
+                     [3, 4]])
+
+matrix_b = np.array([[5, 6],
+                     [7, 8]])
+
+matrix_c = np.array([[4, 7, 2],
+                     [3, 6, 1],
+                     [2, 5, 3]])
+
+# Matrix Addition
+addition_result = matrix_a + matrix_b
+print("Addition Result:\n", addition_result)
+
+# Matrix Subtraction
+subtraction_result = matrix_a - matrix_b
+print("Subtraction Result:\n", subtraction_result)
+
+# Matrix Multiplication
+multiplication_result = np.dot(matrix_a, matrix_b)
+print("Multiplication Result:\n", multiplication_result)
+
+# Matrix Inversion
+inversion_result = np.linalg.inv(matrix_c)
+print("Inversion Result:\n", inversion_result)
